@@ -3,49 +3,6 @@
     <span id="toggle-theme-button-text">Toggle light mode</span>
 </astral-button>
 
-<script>
-    const toggleThemeButton = document.body.querySelector('#toggle-theme-button');
-    const icon = toggleThemeButton.querySelector('i');
-    const buttonText = toggleThemeButton.querySelector('#toggle-theme-button-text');
-
-    const isDarkTheme = () => document.documentElement.getAttribute('data-theme') === 'dark';
-
-    const updateThemeUI = () => {
-        if (isDarkTheme()) {
-            icon.innerText = 'light_mode';
-            buttonText.innerText = 'Toggle light mode';
-        } else {
-            icon.innerText = 'dark_mode';
-            buttonText.innerText = 'Toggle dark mode';
-        }
-    };
-
-    updateThemeUI();
-
-    toggleThemeButton.addEventListener('click', () => {
-        if (isDarkTheme()) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-        updateThemeUI();
-    });
-
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (event.matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-    });
-</script>
-
 <fieldset>
     <legend>Buttons</legend>
 
