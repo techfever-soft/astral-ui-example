@@ -1,8 +1,8 @@
 // Use the Astral UI SCSS functions to set your own color variables
-@use "../node_modules/@techfever/astral-ui/dist/astralui/scss/functions/rgb" as *;
+@use "../node_modules/@techfever/astral-ui/dist/astralui/scss/functions/rgb.scss" as *;
 
 // Import the Web Components CSS for Ripples
-@import "../node_modules/@techfever/astral-ui/src/assets/material-components-web.min.css";
+@import "../node_modules/@techfever/astral-ui/dist/astralui/assets/material-components-web.min.css";
 
 :root {
   --astral-primary-font: "K2D", sans-serif;
